@@ -9,13 +9,13 @@ Make sure you have this installed
 ### Git
 
 ```
-apt install git
+sudo apt install git
 ```
 
 ### Stow
 
 ```
-apt install stow
+sudo apt install stow
 ```
 
 ## Installation
