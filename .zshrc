@@ -14,9 +14,6 @@ alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
 
 source /home/tomas/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/tomas/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
