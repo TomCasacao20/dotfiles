@@ -13,6 +13,13 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
 
+if [[ ! -d ~/.zsh-autopair ]]; then
+  git clone https://github.com/hlissner/zsh-autopair ~/.zsh-autopair
+fi
+
+source ~/.zsh-autopair/autopair.zsh
+autopair-init
+
 source /home/tomas/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/tomas/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
