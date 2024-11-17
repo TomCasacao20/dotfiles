@@ -19,3 +19,7 @@ source /home/tomas/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 bindkey              '^I' menu-select
 bindkey "$terminfo[kcbt]" menu-select
+
+eval "$(zoxide init zsh)"
+
+alias cd=z
