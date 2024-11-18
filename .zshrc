@@ -28,6 +28,3 @@ bindkey              '^I' menu-select
 bindkey "$terminfo[kcbt]" menu-select
 
 eval "$(zoxide init zsh)"
-
-alias cd=z
-alias cdi=zi
