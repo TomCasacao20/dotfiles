@@ -24,7 +24,7 @@ source /home/tomas/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/tomas/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-bindkey              '^I' menu-select
-bindkey "$terminfo[kcbt]" menu-select
+bindkey              '^I'         menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
 
 eval "$(zoxide init zsh)"
