@@ -18,9 +18,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias ls="eza --icons=always"
-alias la="eza -a --icons=always"
-
 if [[ ! -d ~/.zsh-autopair ]]; then
   git clone https://github.com/hlissner/zsh-autopair ~/.zsh-autopair
 fi
@@ -34,6 +31,10 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias ls="eza --icons=always"
+alias la="eza -a --icons=always"
+alias gstat="git status"
 
 eval "$(zoxide init zsh)"
 
