@@ -35,6 +35,7 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
 alias gstat="git status"
+alias gadd="git add"
 
 eval "$(zoxide init zsh)"
 
