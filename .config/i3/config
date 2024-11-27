@@ -32,7 +32,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # background image
 
-exec --no-startup-id feh --bg-fill ~/Downloads/Dune-worm-desert-wallpaper-4k.jpg
+exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/Dune-worm-desert-wallpaper-4k.jpg
 
 
 # transperancy
@@ -155,7 +155,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #lockscreen
-set $i3lockwall i3lock -i ~/Downloads/Dune-worm-desert-wallpaper-4k.png
+set $i3lockwall i3lock -i ~/dotfiles/wallpaper/pxfuel.png
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 # reload the configuration file
@@ -214,3 +214,9 @@ bar {
 #       Disable all tray icons
         tray_output none
 }
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
