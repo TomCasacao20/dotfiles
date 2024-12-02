@@ -36,7 +36,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/Dune-worm-desert-wallpaper-4k.jpg
 
-
 # transperancy
 
 exec --no-startup-id picom -b
@@ -62,9 +61,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -158,7 +157,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #lockscreen
 set $i3lockwall i3lock -i ~/dotfiles/wallpaper/pxfuel.png
-bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall & sleep 5 && xset dpms force off 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
