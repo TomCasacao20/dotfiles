@@ -36,6 +36,8 @@ alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
 alias gstat="git status"
 alias gadd="git add"
+alias cd="z"
+alias cat="batcat"
 
 eval "$(zoxide init zsh)"
 
