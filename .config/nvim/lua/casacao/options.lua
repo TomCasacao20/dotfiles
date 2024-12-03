@@ -11,5 +11,8 @@ o.shiftwidth = 4
 o.expandtab = true
 o.smartindent = true
 
+o.hlsearch = false
+o.ignorecase = true
+
 o.scrolloff = 10
 o.cursorline = true

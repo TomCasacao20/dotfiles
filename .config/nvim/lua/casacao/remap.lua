@@ -8,8 +8,6 @@ keymap.set("n", "<A-l>", ":m .-2<CR>==")
 keymap.set("v", "<A-k>", ":m '>+1<CR>gv=gv")
 keymap.set("v", "<A-l>", ":m '<-2<CR>gv=gv")
 
-
-
 keymap.set({ "n", "v", "o" }, "j", "h")
 keymap.set({ "n", "v", "o" }, "k", "j")
 keymap.set({ "n", "v", "o" }, "l", "k")
