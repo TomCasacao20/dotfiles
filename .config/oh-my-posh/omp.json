@@ -32,7 +32,6 @@
         },
         {
           "properties": {
-            "branch_icon": "",
             "cache_duration": "none",
             "commit_icon": "@",
             "fetch_status": true
