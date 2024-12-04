@@ -17,4 +17,4 @@ keymap.set({ "n", "v", "o" }, "l", "k")
 keymap.set({ "n", "v", "o" }, "ç", "l")
 keymap.set({ "n", "v", "o" }, ";", "l")
 
-keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { desc = "[F]ile[B]rowser" })
