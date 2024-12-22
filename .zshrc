@@ -26,6 +26,7 @@ alias gstat="git status"
 alias gadd="git add"
 alias cat="batcat"
 alias fd="fdfind"
+alias layout="setxkbmap -layout"
 
 eval "$(zoxide init zsh)"
 
