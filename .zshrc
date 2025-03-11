@@ -20,11 +20,11 @@ echo "
 ███████╗    ╚███╔███╔╝╚██████╔╝██║  ██║██║ ╚████║   ██║                            
 ╚══════╝     ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝                            
 "
-ISTFILE=~/.zhistory
-HISTSIZE=1000
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
 SAVEHIST=10000
+setopt appendhistory
 EDITOR=nvim
-setopt extendedglob nomatch
 unsetopt autocd beep notify
 bindkey -e
 
@@ -44,13 +44,14 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
-alias gstat="git status"
-alias gadd="git add"
 alias cat="batcat"
 alias fd="fdfind"
 alias layout="setxkbmap -layout"
+alias matlab="matlab -softwareopengl"
 
 eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/omp.json)"
+
+eval $(thefuck --alias)
