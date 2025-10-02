@@ -158,7 +158,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #lockscreen
-set $i3lockwall i3lock -i ~/dotfiles/wallpaper/pxfuel.png
+set $i3lockwall i3lock -i ~/dotfiles/wallpaper/apo.png
+#set $i3lockwall i3lock -i ~/dotfiles/wallpaper/pxfuel.png
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall & sleep 5 && xset dpms force off 
 
 # reload the configuration file
