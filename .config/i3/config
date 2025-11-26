@@ -15,7 +15,12 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 11
 
-for_window [class="^.*"] border pixel 0
+# for_window [class="^.*"] border pixel 1
+
+default_border pixel 1
+default_floating_border pixel 1
+
+gaps inner 12px
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -54,11 +59,17 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Power Profiles menu switcher using rofi
+bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+
 # start a terminal
 bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+#interactive screenshot by pressing printscreen
+bindsym Print exec gnome-screenshot -i
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
