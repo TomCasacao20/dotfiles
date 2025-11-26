@@ -15,13 +15,13 @@
     ],
     "modules-right": [
         "idle_inhibitor",
-        "mpris",
+        // "mpris",
         "bluetooth",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
         "battery",
-        "tray",
+        // "tray",
         "custom/power"
     ],
     // Modules configuration

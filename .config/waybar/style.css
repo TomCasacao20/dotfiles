@@ -5,15 +5,14 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(43, 48, 59, 0);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 0;
 }
 
 /*
@@ -60,7 +59,7 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0);
 }
 
 #workspaces button.focused {
@@ -116,17 +115,16 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: transparent;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: transparent;
+    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
 }
 
 @keyframes blink {
@@ -176,21 +174,7 @@ button:hover {
 
 #power-profiles-daemon {
     padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
     color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 label:focus {
@@ -215,21 +199,14 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    color: #f0f0f0;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    color: #ffffff;
 }
 
 #wireplumber {
@@ -264,25 +241,11 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: transparent;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    color: #ffffff;
 }
 
 #mpd {
