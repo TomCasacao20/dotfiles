@@ -21,7 +21,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
 alias cat="bat"
-alias fd="fdfind"
 alias layout="setxkbmap -layout"
 alias matlab="matlab -softwareopengl"
 alias clear="clear && fastfetch"
