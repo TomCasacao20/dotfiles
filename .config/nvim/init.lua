@@ -1,1 +1,1 @@
-require("casacao")
+../../dotfiles/.config/nvim/init.lua

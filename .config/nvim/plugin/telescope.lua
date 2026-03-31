@@ -1,0 +1,1 @@
+../../../dotfiles/.config/nvim/plugin/telescope.lua
