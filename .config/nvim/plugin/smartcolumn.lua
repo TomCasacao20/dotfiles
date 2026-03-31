@@ -1,1 +1,1 @@
-../../../dotfiles/.config/nvim/plugin/smartcolumn.lua
+vim.pack.add({ "https://github.com/m4xshen/smartcolumn.nvim"})

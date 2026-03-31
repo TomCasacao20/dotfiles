@@ -1,1 +1,4 @@
-../../../dotfiles/.config/nvim/plugin/mini-pairs.lua
+vim.pack.add({ 'https://github.com/nvim-mini/mini.pairs' })
+require('mini.pairs').setup({
+  modes = { command = true },
+})

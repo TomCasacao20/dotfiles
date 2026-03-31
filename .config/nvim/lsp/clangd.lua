@@ -1,1 +1,0 @@
-../../../dotfiles/.config/nvim/lsp/clangd.lua

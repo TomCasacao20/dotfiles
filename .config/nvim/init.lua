@@ -1,1 +1,5 @@
-../../dotfiles/.config/nvim/init.lua
+vim.loader.enable()
+
+require("options.commands")
+require("options.remap")
+require("options.options")
