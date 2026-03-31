@@ -26,6 +26,7 @@ autopair-init
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+alias lg="lazygit"
 alias ls="eza --icons=always"
 alias la="eza -a --icons=always"
 alias cat="bat"
@@ -33,6 +34,7 @@ alias cd="z"
 alias layout="setxkbmap -layout"
 alias matlab="matlab -softwareopengl"
 alias clear="clear && fastfetch"
+alias nvim="chmod u+x ~/nvim-linux-x86_64.appimage && ~/nvim-linux-x86_64.appimage"
 
 eval "$(zoxide init zsh)"
 
@@ -45,3 +47,5 @@ eval $(thefuck --alias)
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/tomasc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /usr/share/nvm/init-nvm.sh
