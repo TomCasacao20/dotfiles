@@ -6,6 +6,8 @@ require("mason").setup({})
 
 vim.lsp.enable({
     "lua_ls",
+    "stylua",
+    "clangd",
 })
 
 vim.pack.add({
@@ -16,7 +18,7 @@ require('blink.cmp').setup({
     fuzzy = { implementation = 'prefer_rust_with_warning' },
     signature = { enabled = true },
     keymap = {
-        preset = "default",
+        preset = "enter",
     },
 
     appearance = {
