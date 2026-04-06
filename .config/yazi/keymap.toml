@@ -1,0 +1,20 @@
+# keymap.toml
+[mgr]
+prepend_keymap = [
+    # --- MOVEMENT ---
+    { on = [ "j" ], run = "leave",    desc = "Move left (Parent)" },
+    { on = [ "k" ], run = "arrow 1",  desc = "Move down" },
+    { on = [ "l" ], run = "arrow -1", desc = "Move up" },
+    { on = [ ";" ], run = "enter",    desc = "Move right (Child)" },
+
+    # --- CONFLICT RESOLUTION ---
+    # Move 'Shell' from ; to h
+    { on = [ "h" ], run = "shell --interactive",    desc = "Open shell" },
+]
+
+# Ensure movement works the same in the Help menu
+[help]
+prepend_keymap = [
+    { on = [ "k" ], run = "arrow 1",  desc = "Move down" },
+    { on = [ "l" ], run = "arrow -1", desc = "Move up" },
+]
