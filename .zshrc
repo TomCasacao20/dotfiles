@@ -34,7 +34,6 @@ alias cd="z"
 alias layout="setxkbmap -layout"
 alias matlab="matlab -softwareopengl"
 alias clear="clear && fastfetch"
-alias nvim="chmod u+x ~/nvim-linux-x86_64.appimage && ~/nvim-linux-x86_64.appimage"
 
 eval "$(zoxide init zsh)"
 
