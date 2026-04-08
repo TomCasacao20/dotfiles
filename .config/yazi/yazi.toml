@@ -1,2 +1,2 @@
 [opener]
-edit = [{ run = 'chmod u+x ~/nvim-linux-x86_64.appimage && ~/nvim-linux-x86_64.appimage "$@"', block = true }]
+edit = [{ run = 'nvim "$@"', block = true }]
