@@ -8,6 +8,7 @@ vim.lsp.enable({
     "lua_ls",
     "stylua",
     "clangd",
+    "hyprls",
 })
 
 vim.pack.add({
