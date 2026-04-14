@@ -13,6 +13,10 @@
       "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
+    "markview.nvim": {
+      "rev": "1861f959599ae03cfd59f56222a542035b0cd947",
+      "src": "https://github.com/OXY2DEV/markview.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "037398b9ce4a53ba48d5f94765c641a1fd16d906",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
