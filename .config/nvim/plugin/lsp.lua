@@ -9,6 +9,7 @@ vim.lsp.enable({
     "stylua",
     "clangd",
     "hyprls",
+    "pyright",
 })
 
 vim.pack.add({
