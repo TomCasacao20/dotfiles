@@ -264,8 +264,6 @@ hl.device({
 })
 
 
--- DONE TO HERE --
-
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -277,13 +275,23 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("hyprwave"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("hyprwave"))
-hl.bind(mainMod .. " + space", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle"}))
+hl.bind(mainMod .. " + SHIFT + CONTROL + BackSpace", hl.dsp.exec_cmd("shutdown -now"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))    -- dwindle only
+
+-- Window cycling
+hl.bind(mainMod .. " + Tab", function()
+    hl.dispatch(hl.dsp.window.cycle_next())    -- Change focus to another window
+    hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+end)
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -294,9 +302,16 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + semicolon", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + ccedilha", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + ccedilla", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + L",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + K",  hl.dsp.focus({ direction = "down" }))
+
+-- Move active window
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + semicolon", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + ccedilla", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -332,6 +347,27 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+-- FIXME
+-- wiki has this wrong
+--[[
+-- Switch to a submap called `resize`.
+hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
+
+-- Start a submap called "resize".
+hl.define_submap("resize", function()
+
+    -- Set repeating binds for resizing the active window.
+    hl.bind("J", hl.resize({ x = 10, y = 0, relative = true}), { repeating = true })
+    hl.bind("semicolon", hl.resize({ x = -10, y = 0, relative = true}), { repeating = true })
+    hl.bind("ccedilla", hl.resize({ x = -10, y = 0, relative = true}), { repeating = true })
+    hl.bind("L", hl.resize({ x = 0, y = 10, relative = true}), { repeating = true })
+    hl.bind("K", hl.resize({ x = 10, y = -10, relative = true}), { repeating = true })
+
+    -- Use `reset` to go back to the global submap
+    hl.bind("escape", hl.dsp.submap("reset"))
+
+end)
+]]
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
