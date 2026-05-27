@@ -352,9 +352,6 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.bind(mainMod .. " + SHIFT + CONTROL + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + SHIFT + CONTROL + S", hl.dsp.exec_cmd("systemctl suspend"))
 
--- FIXME
--- wiki has this wrong
---[[
 -- Switch to a submap called `resize`.
 hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
 
@@ -362,18 +359,16 @@ hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
 hl.define_submap("resize", function()
 
     -- Set repeating binds for resizing the active window.
-    hl.bind("J", hl.resize({ x = 10, y = 0, relative = true}), { repeating = true })
-    hl.bind("semicolon", hl.resize({ x = -10, y = 0, relative = true}), { repeating = true })
-    hl.bind("ccedilla", hl.resize({ x = -10, y = 0, relative = true}), { repeating = true })
-    hl.bind("L", hl.resize({ x = 0, y = 10, relative = true}), { repeating = true })
-    hl.bind("K", hl.resize({ x = 10, y = -10, relative = true}), { repeating = true })
+    hl.bind("semicolon", hl.dsp.window.resize({ x = 20, y = 0, relative = true}), { repeating = true })
+    hl.bind("ccedilla", hl.dsp.window.resize({ x = 20, y = 0, relative = true}), { repeating = true })
+    hl.bind("J", hl.dsp.window.resize({ x = -10, y = 0, relative = true}), { repeating = true })
+    hl.bind("L", hl.dsp.window.resize({ x = 0, y = 20, relative = true}), { repeating = true })
+    hl.bind("K", hl.dsp.window.resize({ x = 0, y = -20, relative = true}), { repeating = true })
 
     -- Use `reset` to go back to the global submap
     hl.bind("escape", hl.dsp.submap("reset"))
 
 end)
-]]
-
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
