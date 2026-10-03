@@ -244,7 +244,7 @@ hl.config({
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
-            natural_scroll = false,
+            natural_scroll = true,
             drag_lock = 1
         },
     },
@@ -386,6 +386,14 @@ local suppressMaximizeRule = hl.window_rule({
     suppress_event = "maximize",
 })
 -- suppressMaximizeRule:set_enabled(false)
+
+hl.window_rule({
+    name = "floating-calculator",
+    match = {
+       class = "org.kde.kalk"
+    },
+    float = true,
+})
 
 hl.window_rule({
     -- Fix some dragging issues with XWayland
